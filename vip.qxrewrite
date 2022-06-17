@@ -1,7 +1,0 @@
-hostname = api.keepkeep.com, *.gotokeep.com, notability.com
-# keep解锁会员    *.gotokeep.com
-^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/keep.js
-
-
-#Notability解锁订阅
-^https?:\/\/notability\.com\/subscriptions url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/NotabilityProCrack.js
