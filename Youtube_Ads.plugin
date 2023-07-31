@@ -23,4 +23,4 @@ http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|p
 # http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_TimedText_response.js, requires-body = true, tag = YouTube字幕响应, argument = 
 
 [MITM]
-hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com,  -redirector*.googlevideo.com
+hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, m.youtube.com, tv.youtube.com, -redirector*.googlevideo.com
