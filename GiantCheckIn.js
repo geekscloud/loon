@@ -17,6 +17,7 @@ for (let i = 1; i <= 3; i++) {
             body: `type=${i}&user_id=7696229`
         },
         function (errormsg, response, data) {
+            console.log("请求结束");
             console.log(`每日签到${i}, ${errormsg} res: ${response}, data: ${data}`);
         });
 }
