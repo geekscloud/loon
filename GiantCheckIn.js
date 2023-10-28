@@ -43,7 +43,24 @@ for (let i = 1; i <= 3; i++) {
         body: `type=${i}&user_id=7696229`
     }
     lk.post(url, (error, _response, data) => {
-        lk.log(`每日签到${i}, ${error} res: ${_response}, data: ${data}`);
+        try{
+            if (error){
+                lk.execFail()
+                lk.appendNotifyInfo('${i}请求失败, 稍后再试');
+            } else {
+                let dataObj = JSON.parse(data);
+                lk.log(`每日签到 ${dataObj["status"]} ${decodeURI(dataObj[msg])}`)
+
+            }
+        } catch (e) {
+            lk.logErr(e)
+            lk.log(`捷安特签到返回数据：${data}`)
+            lk.execFail()
+            lk.appendNotifyInfo(`❌捷安特签到错误，稍后再试`)
+
+        } finally {
+            resolve()
+        }
     });
 }
 
