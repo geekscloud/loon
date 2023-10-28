@@ -1,3 +1,5 @@
+console.log("每日签到开始");
+
 $httpClient.post({
         url: 'https://opo.giant.com.cn/opo/index.php/day_pic/do_app_pic/',
 
