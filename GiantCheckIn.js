@@ -1,9 +1,4 @@
 console.log("每日签到开始");
-$httpClient.get({
-    url: "https://baidu.com/"
-}, function(errormsg,response,data){
-    console.log("请求结束");
-})
 for (let i = 1; i <= 3; i++) {
     console.log(`请求${i}`);
     $httpClient.post({
@@ -22,7 +17,7 @@ for (let i = 1; i <= 3; i++) {
             },
             body: `type=${i}&user_id=7696229`
         },
-        function (errormsg, response, data) {
+        (errormsg, response, data)=> {
             console.log("请求结束");
             console.log(`每日签到${i}, ${errormsg} res: ${response}, data: ${data}`);
         });
