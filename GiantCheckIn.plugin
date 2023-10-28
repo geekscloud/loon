@@ -1,0 +1,10 @@
+#!name=捷安特签到
+#!desc=捷安特定时签到及分享签到
+#!author=Try
+#!homepage=https://github.com/geekscloud/loon/tree/main
+
+[Script]
+cron "0 5 0 * * ?" script-path=https://raw.githubusercontent.com/geekscloud/loon/main/GiantCheckIn.js, timeout=300, tag=捷安特签到
+
+[mitm]
+opo.giant.com.cn
