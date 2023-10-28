@@ -49,7 +49,7 @@ for (let i = 1; i <= 3; i++) {
                 lk.appendNotifyInfo('${i}请求失败, 稍后再试');
             } else {
                 let dataObj = JSON.parse(data);
-                lk.log(`每日签到 ${dataObj["status"]} ${decodeURI(dataObj[msg])}`)
+                lk.log(`每日签到 ${dataObj["status"]} ${decodeURI(dataObj["msg"])}`)
 
             }
         } catch (e) {
