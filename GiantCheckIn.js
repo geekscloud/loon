@@ -1,5 +1,6 @@
 console.log("每日签到开始");
 for (let i = 1; i <= 3; i++) {
+    console.log(`请求${i}`);
     $httpClient.post({
             url: 'https://opo.giant.com.cn/opo/index.php/day_pic/do_app_pic/',
             headers: {
