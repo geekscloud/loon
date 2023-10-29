@@ -45,10 +45,10 @@ for (let i = 1; i <= 3; i++) {
         try{
             if (error){
                 lk.execFail()
-                lk.appendNotifyInfo('${i}请求失败, 稍后再试');1
+                lk.appendNotifyInfo('${i}请求失败, 稍后再试');
             } else {
                 let dataObj = JSON.parse(data);
-                lk.log(`每日签到任务${i} 返回代码:${dataObj["status"]} 提示${decodeURI(dataObj["msg"])}`)
+                lk.log(`每日签到任务${i} 返回代码: ${dataObj["status"]} 提示: ${decodeURI(dataObj["msg"])}`)
 
             }
         } catch (e) {
