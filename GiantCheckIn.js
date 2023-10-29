@@ -25,7 +25,7 @@
 
 const lk = new ToolKit(`捷安特签到`, `GiantCheckIn`, {"httpApi": "ffff@10.0.0.19:6166"})
 for (let i = 1; i <= 3; i++) {
-    let url = {
+    const url = {
         url: 'https://opo.giant.com.cn/opo/index.php/day_pic/do_app_pic/',
         headers: {
             "Accept": "application/json, text/plain, */*",
@@ -40,7 +40,7 @@ for (let i = 1; i <= 3; i++) {
             "Cookie": "opo_frontend=606032d414fc5a74ee99a4d4274a57c49f59afbd"
         },
         body: `type=${i}&user_id=7696229`
-    }
+    };
     lk.post(url, (error, _response, data) => {
         try{
             if (error){
@@ -49,7 +49,6 @@ for (let i = 1; i <= 3; i++) {
             } else {
                 let dataObj = JSON.parse(data);
                 lk.log(`每日签到任务${i} 返回代码: ${dataObj["status"]} 提示: ${decodeURI(dataObj["msg"])}`)
-
             }
         } catch (e) {
             lk.logErr(e)
