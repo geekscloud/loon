@@ -24,7 +24,7 @@
 
 
 const lk = new ToolKit(`捷安特签到`, `GiantCheckIn`, {"httpApi": "ffff@10.0.0.19:6166"})
-for (let i = 1; i <= 3; i++) {
+for (let i = 1; i <= 5; i++) {
     const url = {
         url: 'https://opo.giant.com.cn/opo/index.php/day_pic/do_app_pic/',
         headers: {
